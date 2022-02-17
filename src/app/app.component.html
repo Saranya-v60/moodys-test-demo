@@ -1,5 +1,12 @@
+<button mat-button color="primary" (click)="showModal1 =!showModal1">Open Model 1</button>
+<button mat-button color="primary" (click)="showModal2 = !showModal2">Open Model 2</button>
+
+    
+<div *ngIf="showModal1">
+    <ml-fabric-modal [componentName]="modal1" (closeEvent)="showModal1 = false"> </ml-fabric-modal>
+</div>
 
 
-
-<button mat-button color="primary" (click)="openModal1()">Open Model 1</button>
-<button mat-button color="primary" (click)="openModal2()">Open Model 2</button>
+<div *ngIf="showModal2">
+    <ml-fabric-modal [componentName]="modal2" (closeEvent)="showModal2 = false"> </ml-fabric-modal>
+</div>

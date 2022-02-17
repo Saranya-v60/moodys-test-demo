@@ -1,16 +1,15 @@
 import { ComponentType } from '@angular/cdk/portal';
-import { Injectable } from '@angular/core';
-import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { Injectable, ViewContainerRef } from '@angular/core';
+// import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MlFabricModalService {
 
-  constructor(public dialog: MatDialog) { }
+  viewContainerRef!: ViewContainerRef;
 
-  open<T>(component: ComponentType<T>, config?: MatDialogConfig) {
-    return this.dialog.open(component, config);
-  }
+  constructor() { }
 
+  open<T>(component?: ComponentType<T>, config?: any) {}
 }

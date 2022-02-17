@@ -12,13 +12,9 @@ export interface DialogData {
 export class Modal2Component {
 
   constructor(
-    public dialogRef: MatDialogRef<Modal2Component>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData,
+
   ) {}
 
-  onNoClick(): void {
-    this.dialogRef.close();
-  }
 
 
 }
